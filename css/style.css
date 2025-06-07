@@ -1,0 +1,202 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+body {
+    background-image: url('../fondo_menu.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #2c3e50 url('../logo.jpg') no-repeat 20px center / auto 60px;
+    color: white;
+    padding: 15px 30px 15px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+nav a:hover, nav a.active {
+    background-color: #34495e;
+}
+main, .container {
+    padding: 20px 30px;
+}
+section, .content-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+.input-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.input-icon i.icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+input[type="text"], input[type="password"], input[type="date"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+button, .register-link {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Styles for Entry/Exit differentiation */
+.entry-color {
+    background-color: #4CAF50; /* Example green color for entry */
+    color: white;
+}
+
+.exit-color {
+    background-color: #F44336; /* Example red color for exit */
+    color: white;
+}
+
+/* You might want to add hover/active states as well */
+.entry-color:hover {
+    background-color: #45a049;
+}
+
+.exit-color:hover {
+    background-color: #e53935;
+}
+
+.button-container {
+    display: flex; /* Use flexbox to arrange buttons */
+    gap: 10px; /* Add space between buttons */
+    justify-content: center; /* Center the buttons */
+    margin-top: 20px; /* Add some space above the buttons */
+}
+
+.button-container button {
+    flex-grow: 1; /* Allow buttons to grow and fill the container */
+    padding: 10px 20px; /* Adjust padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+button:hover, .register-link:hover {
+    background-color: #2980b9;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+footer, .footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.9em;
+    border-top: 1px solid #eee;
+}
+.error-message {
+    color: #e74c3c;
+    background: #fbeaea;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.success-message {
+    color: #27ae60;
+    background: #e9f5ee;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    header, main, .container {
+        padding: 10px 15px;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-top: 10px;
+        gap: 10px;
+    }
+    section, .content-section {
+        padding: 15px;
+    }
+    input[type="text"], input[type="password"], input[type="date"], select {
+        font-size: 0.95em;
+    }
+    button, .register-link {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+.register-link {
+    display: block; /* Make the link a block element */
+    width: fit-content; /* Set width to fit content */
+    margin: 20px auto; /* Center the block element horizontally and add vertical margin */
+    text-align: center; /* Center the text inside the link */
+    /* Add any other styling you want for the link, e.g., padding, background, color */
+    padding: 10px 20px;
+    background-color: #007bff; /* Example background color */
+    color: white; /* Example text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+}

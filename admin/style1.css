@@ -1,0 +1,514 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mantener el de style1.css */
+    margin: 0;
+    background-color: #f4f7f6; /* Mantener el de style1.css */
+    color: #333;
+    line-height: 1.6; /* Añadido de style.css */
+    padding-top: 80px; /* Add padding to account for fixed header */
+}
+
+/* Header logo styles */
+.header-logo {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.header-logo-img {
+    height: 60px; /* Adjust height as needed */
+    width: auto;
+    max-width: 200px; /* Adjust max-width as needed */
+    object-fit: contain;
+}
+
+.main-header {
+    background: #2c3e50 url('../logo.jpg') no-repeat 20px center / auto 50px;
+    color: white;
+    padding: 15px 30px 15px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.main-header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.main-header .logo i {
+    margin-right: 8px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a i {
+    margin-right: 5px;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    background-color: #34495e; /* Un azul un poco más claro para hover/activo */
+}
+
+.toolbar {
+    background-color: #ecf0f1; /* Gris claro de style1.css */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dcdcdc;
+    flex-wrap: wrap; /* Añadido para mejor responsividad */
+}
+
+.toolbar .filter-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Añadido para espacio en pantallas pequeñas */
+}
+
+.toolbar .filter-group label {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.toolbar .filter-group input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.toolbar .btn-refresh {
+    background-color: #3498db; /* Azul de style1.css */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar .btn-refresh i {
+    margin-right: 5px;
+}
+
+.toolbar .btn-refresh:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+}
+
+.container {
+    padding: 20px 30px;
+}
+
+.content-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.content-section h2 {
+    color: #2c3e50; /* Azul oscuro de style1.css */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.content-section h2 i {
+    margin-right: 10px;
+    color: #3498db; /* Azul de style1.css */
+}
+
+.content-section .section-description {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.data-table th {
+    background-color: #e9eef2; /* Azul muy claro para cabeceras de tabla */
+    color: #2c3e50; /* Azul oscuro */
+    font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.data-table .actions a, .data-table .actions button {
+    color: #3498db; /* Azul para iconos de acción */
+    text-decoration: none;
+    margin-right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.data-table .actions a:hover, .data-table .actions button:hover {
+    background-color: #e0e0e0;
+}
+
+.data-table .actions .delete-icon {
+    color: #e74c3c; /* Rojo para eliminar */
+}
+
+.data-table .actions .edit-icon {
+    color: #f39c12; /* Naranja para editar */
+}
+
+.status-afuera {
+    background-color: #fbeaea; /* Fondo rojo claro */
+    color: #c0392b; /* Texto rojo oscuro */
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.status-presente {
+    background-color: #eaf7e9; /* Fondo verde claro */
+    color: #27ae60; /* Texto verde oscuro */
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 1em;
+    flex-grow: 1;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #3498db; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.search-bar button i {
+    margin-right: 5px;
+}
+
+/* Para iconos de Font Awesome (si los usas) */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'); */
+
+/* Si no usas Font Awesome, puedes omitir la línea anterior y los <i> tags o usar SVGs/otros iconos */
+
+/* Styles for observations */
+.observations-cell {
+    position: relative;
+    padding-right: 35px !important;
+}
+
+.observations-text {
+    display: inline-block;
+    max-width: calc(100% - 25px);
+    vertical-align: middle;
+    word-break: break-word;
+}
+
+.edit-obs-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    display: none;
+    font-size: 14px;
+}
+
+.edit-obs-btn:hover {
+    color: #2196F3;
+    background-color: #f0f0f0;
+}
+
+tr:hover .edit-obs-btn {
+    display: inline-block;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #777;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-cancel,
+.btn-save {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.btn-cancel {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #c0392b;
+}
+
+.btn-save {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #27ae60;
+}
+
+.welcome-message {
+    text-align: right;
+    font-size: 0.9em;
+    color: #bdc3c7; /* Gris claro para el mensaje de bienvenida */
+}
+
+.main-header .user-area {
+    display: flex;
+    align-items: center;
+}
+
+.main-header .user-area .welcome-message {
+    margin-right: 20px;
+}
+
+
+/* Estilos para los iconos de entrada/salida en la tabla de asistencia */
+.entry-icon {
+    color: green;
+    margin-right: 5px;
+}
+
+.exit-icon {
+    color: red;
+    margin-right: 5px;
+}
+
+/* Estilos para los botones de vista (Asistencia/Usuarios) */
+.view-switcher {
+    margin-bottom: 20px;
+}
+
+.view-switcher a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.view-switcher a.active {
+    background-color: #3498db; /* Azul */
+    color: white;
+    border-color: #3498db;
+}
+
+.view-switcher a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .main-header, .toolbar, .container {
+        padding: 10px 15px;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        margin-top: 10px;
+    }
+
+    .main-nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toolbar .filter-group {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .toolbar .filter-group input[type="date"] {
+        flex-grow: 1;
+    }
+
+    .toolbar .btn-refresh {
+        width: auto; /* Ajustar si se hizo full-width antes */
+        margin-top: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .search-bar button {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .data-table th, .data-table td {
+        padding: 8px;
+    }
+
+    /* Ocultar algunas columnas en pantallas pequeñas si es necesario */
+    /* .data-table th:nth-child(odd), .data-table td:nth-child(odd) { display: none; } */
+}
