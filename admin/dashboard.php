@@ -214,7 +214,7 @@ $conn->close();
     </div>
 
     <footer class="footer">
-        <p>&copy; <?php echo date('Y'); ?> Club Militar App. Todos los derechos reservados.</p>
+        <p>&copy; <?php echo date('Y'); ?> I.A.C.F.A. Todos los derechos reservados.</p>
     </footer>
 
 </body>
@@ -1184,8 +1184,8 @@ function loadUserAttendance(userId, month, year) {
                     html += `
                         <tr>
                             <td>${entryTime.toLocaleDateString('es-VE')}</td>
-                            <td>${entryTime.toLocaleTimeString('es-VE', options)}</td>
-                            <td>${exitTime ? exitTime.toLocaleTimeString('es-VE', options) : 'No registrada'}</td>
+                            <td>${entryTime.toLocaleString('es-VE', {hour: '2-digit', minute: '2-digit', hour12: true})}</td>
+                            <td>${exitTime ? exitTime.toLocaleString('es-VE', {hour: '2-digit', minute: '2-digit', hour12: true}) : 'No registrada'}</td>
                             <td class="hours-worked">${hoursWorked}</td>
                             <td class="observations">${record.observaciones || '-'}</td>
                         </tr>`;
@@ -1306,7 +1306,7 @@ function exportToExcel() {
     </head>
     <body>
         <div class="header">
-            <div class="title">CLUB MILITAR</div>
+            <div class="title">I.A.C.F.A</div>
             <div class="subtitle">HISTORIAL DE ASISTENCIA</div>
             ${nombreCompleto ? `<div class="subtitle">${nombreCompleto}</div>` : ''}
             ${cedula ? `<div class="subtitle">CÉDULA: ${cedula}</div>` : ''}
@@ -1596,7 +1596,7 @@ document.getElementById('editUserForm').onsubmit = function(e) {
 };
 </script>
 <footer>
-        <p>&copy; 2025 Club Militar. Todos los derechos reservados.</p>
+        <p>&copy; 2025 I.A.C.F.A. Todos los derechos reservados.</p>
     </footer>
     
     <!-- Modal para editar observaciones -->

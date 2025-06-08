@@ -1,6 +1,6 @@
-# Sistema de Gestión Club Militar
+# Sistema de Gestión I.A.C.F.A
 
-Este proyecto es un sistema de gestión desarrollado en PHP para un club militar. Permite el registro de usuarios, el control de asistencia y la administración a través de un panel de control.
+Este proyecto es un sistema de gestión desarrollado en PHP para I.A.C.F.A. Permite el registro de usuarios, el control de asistencia y la administración a través de un panel de control.
 
 ## Funcionalidades Principales
 

@@ -74,7 +74,7 @@ if (file_exists($logo_path) && is_file($logo_path)) {
         $logo_html = '<div style="width: 80px; height: 80px; margin: 0 auto 5px auto; overflow: hidden; display: flex; align-items: center; justify-content: center;">';
         $logo_html .= '<img src="data:' . $mime_type . ';base64,' . $logo_data . '" ';
         $logo_html .= 'style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;" ';
-        $logo_html .= 'alt="Club Militar">';
+        $logo_html .= 'alt="I.A.C.F.A">';
         $logo_html .= '</div>';
     }
 }
@@ -97,7 +97,7 @@ $html = '<!DOCTYPE html>
 </head>
 <body>
     <div class="header">
-        <div class="title">CLUB MILITAR</div>
+        <div class="title">I.A.C.F.A</div>
         <div class="subtitle">HISTORIAL DE ASISTENCIA</div>
         <div class="subtitle">' . $titulo . '</div>';
 

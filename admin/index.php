@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - Club Militar</title>
+    <title>Admin Login - I.A.C.F.A</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
         /* Centrar el contenido del main vertical y horizontalmente */
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <header>
-        <h1>Club Militar</h1>
+        <h1>I.A.C.F.A</h1>
         <nav>
             <a href="../index.php">Área de Asistencia</a>
             <a href="index.php">Admin Login</a>
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </main>
 
    <footer>
-        <p>&copy; 2025 Club Militar. Todos los derechos reservados.</p>
+        <p>&copy; 2025 I.A.C.F.A. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Club Militar</h1>
+        <h1>I.A.C.F.A</h1>
         <nav>
             <a href="index.php">Área de Usuario</a>
             <a href="../club-militar-app-master/admin/index.php">Admin Login</a>
@@ -115,7 +115,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Club Militar. Todos los derechos reservados.</p>
+        <p>&copy; 2025 I.A.C.F.A. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

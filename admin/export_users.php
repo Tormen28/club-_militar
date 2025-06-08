@@ -42,7 +42,7 @@ $html = '<!DOCTYPE html>
 </head>
 <body>
     <div style="text-align: center;">
-        <div class="title">CLUB MILITAR</div>
+        <div class="title">I.A.C.F.A</div>
         <div class="subtitle">LISTA DE REGISTRO DE USUARIOS</div>
         <div class="date">Generado el: ' . date('d/m/Y H:i:s') . '</div>
     </div>
