@@ -79,8 +79,8 @@ if ($conn->query($sql_create_asistencia_table) === TRUE) {
 }
 
 // Verificar si el administrador por defecto existe y si no, insertarlo
-$admin_username = 'admin';
-$admin_password = 'admin'; // Contraseña por defecto, ¡CAMBIAR EN PRODUCCIÓN!
+$admin_username = getenv('ADMIN_USER') ?: 'admin';
+$admin_password = getenv('ADMIN_PASS') ?: 'cambiar-esta-clave'; // CAMBIA esta clave (o define ADMIN_PASS)
 $admin_password_hash = password_hash($admin_password, PASSWORD_DEFAULT);
 
 $sql_check_admin = "SELECT id_admin FROM administradores WHERE usuario = '$admin_username'";
