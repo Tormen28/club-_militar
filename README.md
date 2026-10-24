@@ -32,3 +32,22 @@ Este proyecto es un sistema de gestión desarrollado en PHP para I.A.C.F.A. Perm
 ---
 
 *Este README ha sido actualizado para reflejar el estado actual del proyecto PHP.*
+
+## ⚙️ Instalación
+
+Este proyecto **no trae credenciales**: los datos de conexión viven en `config.local.php`,
+que está en `.gitignore` y nunca se sube al repositorio.
+
+```bash
+# 1. Copia el ejemplo
+cp config.example.php config.local.php     # Windows: copy config.example.php config.local.php
+
+# 2. Edita config.local.php con tus datos de MySQL (host / user / pass / name)
+
+# 3. Importa el esquema .sql en phpMyAdmin
+
+# 4. Abre http://localhost/<carpeta>/
+```
+
+> Si ves *«Falta config.local.php»*, es exactamente eso: te falta el paso 1.
+

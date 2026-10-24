@@ -1,0 +1,25 @@
+# Credenciales locales — NUNCA se versionan
+config.local.php
+.env
+.env.*
+
+# Restos de sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+logs/
+.vscode/
+
+# Dependencias
+vendor/
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# Respaldos locales
+*.rar
+*.zip
+*.bak
+*.tmp

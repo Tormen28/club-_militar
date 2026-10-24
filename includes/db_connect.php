@@ -1,8 +1,13 @@
 <?php
-$servername = "localhost";
-$username = "root"; // Reemplaza con tu nombre de usuario de MySQL
-$password = ""; // Reemplaza con tu contraseña de MySQL
-$dbname = "club_militar_db";
+$conf = __DIR__ . '/../config.local.php';
+if (!file_exists($conf)) {
+    die('Falta config.local.php. Copia config.example.php y ajusta tus datos de MySQL.');
+}
+$cfg = require $conf;
+$servername = $cfg['host'];
+$username   = $cfg['user'];
+$password   = $cfg['pass'];
+$dbname     = $cfg['name'];
 
 // Crear conexión al servidor MySQL (sin especificar la base de datos inicialmente)
 $conn = new mysqli($servername, $username, $password);
